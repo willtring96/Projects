@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div><h1 class="guide"><b>Register</b></h1></div>
+
+
+<div class="card">
+  <div class="container">
+
+    <div class="input-group mb-5">
+
+      <div class="row">
+      <!-- FIRST NAME -->
+      <!-- <div class="input-group-prepend">
+        <span class="input-group-text"><span style="color:red">*</span>First Name</span>
+      </div> -->
+      <input #fname placeholder="First Name" type="text" aria-label="First Name" #fname class="form-control" style="margin-right: 10px; background-color: rgb(245, 245, 245)"><br>
+
+        <!-- LAST NAME -->
+      <!-- <div class="input-group-prepend">
+          <span class="input-group-text"><span style="color:red">*</span>Last Name</span>
+        </div> -->
+      <input #lname placeholder="Last Name" type="text" aria-label="Last Name" #lname class="form-control" style="margin-right: 10px; background-color:rgb(245, 245, 245)"><br>
+
+       <!-- USERNAME -->
+       <!-- <div class="input-group-prepend">
+          <span class="input-group-text"><span style="color:red">*</span>Username</span>
+        </div> -->
+      <input #userName placeholder="Username"type="text" aria-label="Username" #username class="form-control" style="margin-right: 10px; background-color:rgb(245, 245, 245)"><br>
+
+         <!-- PASSWORD -->
+      <!-- <div class="input-group-prepend">
+        <span class="input-group-text"><span style="color:red">*</span>Password</span>
+        </div> -->
+      <input #password placeholder="Password" type="password" aria-label="Password" #password class="form-control" style="margin-right: 10px; background-color:rgb(245, 245, 245)"><br>
+    </div>
+    <button type="reset" (click)="createUser(fname.value, lname.value, username.value, password.value)" class="btn btn-info" style="margin-bottom: 10px">Register</button>  
+  </div>
+  
+</div>
+</div>

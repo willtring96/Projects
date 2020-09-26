@@ -1,0 +1,22 @@
+<div class="container">
+<div style="text-align:center">
+<div style="margin-top: 50px; color:ghostwhite"><h1><b>Expense Reimbursement</b></h1></div>
+
+<div style="margin-top: 125px"></div>
+<div class="row">
+<div class="col-3"></div>
+<div class="col">
+<form class="form-group">
+        <h2 style="color:ghostwhite; margin-bottom: 10px">Login</h2>
+        <p style="color: red"><b>{{message}}</b></p>
+        <!-- <label>Username</label><br> -->
+        <input class="form-control" type="text" #user placeholder="Username..." style="margin-bottom: 10px"><br>
+        <!-- <label>Password</label><br> -->
+        <input class="form-control" type="password" #pass placeholder="Password..." style="margin-bottom: 10px"><br>
+        <button type="reset" (click)="login(user.value, pass.value)" class="btn btn-dark" style="margin-bottom: 10px">Login</button>  
+</form>
+</div>
+<div class="col-3"></div>
+</div>
+</div>
+</div>

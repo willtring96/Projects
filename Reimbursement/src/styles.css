@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Playfair Display', serif;
+}
+
+.bg-img{
+    background-image: url('assets/Images/freljord.jpg');
+    /* height: 100%;  */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: sticky;
+    top: 0; */
+}
+
+a{
+    cursor: pointer;
+}

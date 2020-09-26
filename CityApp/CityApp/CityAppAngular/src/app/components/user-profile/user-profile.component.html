@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<h1 class="create"><b>Settings</b></h1>
+
+<div class="card">
+   <div class="container">
+
+      <div class="row">
+         <h2 class="user">{{user.username}}</h2>
+      </div>
+
+    
+ 
+      <div class="change">
+            <div class="button">
+                  <button type="button" class="btn btn-dark" (click)="show()">Change Password</button>
+                </div>
+            <!-- <button type="button" class="btn btn-danger" (click)="all()">DELETE ACCOUNT</button>  -->
+      <form *ngIf="showing" class="form-group">
+         <p style="color: red"><b>{{message}}</b></p>
+          <!-- <label>Old Password</label><br> -->
+         <input #old class="form-control" type="text" #user placeholder="Old Password" style="margin-bottom: 0px"><br>
+         <!-- <label>New Password</label><br> -->
+         <input #newp class="form-control" type="text" #user placeholder="New Password" style="margin-bottom: 0px"><br>
+         <!-- <label>Comirm Password</label><br> -->
+         <input #confirm class="form-control" type="password" #pass placeholder="Comfirm Password" style="margin-bottom: 0px"><br>
+         <div class="button">
+               <button type="button save" class="btn btn-primary" (click)="changePassword(old.value, newp.value, confirm.value)">Save Changes</button>
+             </div>
+      </form>
+   </div>
+
+    <!-- <div class="button">
+      <button type="button delete" class="btn btn-warning" (click)="all()">View Reviews</button>
+    </div> -->
+ 
+   </div>
+</div>

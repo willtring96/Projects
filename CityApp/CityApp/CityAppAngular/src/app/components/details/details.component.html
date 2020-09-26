@@ -1,0 +1,82 @@
+<div>
+<app-navbar></app-navbar>
+
+<!-- CARD -->
+<div class="card">
+    <img src="../../../assets/img/{{attraction.type}}.jpg" class="center">
+
+    <!-- CONTAINER FOR ALL THE INFO -->
+  <div class="container">
+
+    <div class="info">
+            <!-- LOCATION NAME & TYPE COL-->
+<h1>{{attraction.name}}</h1>
+<h6>{{attraction.type}}</h6>
+<h6>{{total | number : '1.2-2'}} STARS</h6>
+            <!-- LOCATION ADDRESS-->   
+<h5>{{attraction.location}}</h5><br><br>
+<p><i>{{attraction.description}}</i></p>
+</div>
+
+
+
+            <!-- LOCATION DESCRIPTION ROW
+      <div class="row description" >
+          <div class="col-1"></div>
+          <div class="col">
+    <h5>{{attraction.description}}</h5>
+        </div>
+        <div class="col-1"></div>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col">
+    <h3>Reviews</h3>
+    <div class="list-group" *ngFor = "let element of reviews">
+        <div class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-0">{{Usernames.get(element.user_id)}}</h5>
+            <small>{{element.score}} STARS</small>
+          </div>
+          <p class="mb-2">{{element.comments}}</p>
+        </div>
+      </div>
+  </div>
+  <div class="col-3"></div>
+  </div>
+
+  <!-- REVIEWS ROW -->
+  <div class="row" style="margin:20px">
+      <div class="col-4"></div>
+      <div class="col" style="text-align: center">
+            <div class="input-group mb-0" style="height:175px">
+                <textarea class="form-control" aria-label="describe" #comments placeholder="Leave a review..."></textarea>
+              </div>
+              <div class="input-group mb-0">
+                  <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01"><span style="color:red">*</span>Rating</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" #score style="margin-right:5px">
+                      <option selected value=0>Choose...</option>
+                      <option value=1>1 STAR</option>
+                      <option value=2>2 STAR</option>
+                      <option value=3>3 STAR</option>
+                      <option value=4>4 STAR</option>
+                      <option value=5>5 STAR</option>
+                      </select>
+              </div>
+      <button type="reset" (click)="submit(score.value, comments.value)" class="btn btn-primary" style="margin-bottom: 10px">Submit Review</button>
+    </div>
+      <div class="col-4"></div>
+
+        <!-- REVIEWS ROW -->
+  </div>
+
+  <!-- CARD -->
+</div>
+
+</div>
+
+

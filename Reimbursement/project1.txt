@@ -1,0 +1,24 @@
+Expense Reimbursement System
+
+Employees should be able to log in
+They can submit reimbursement requests
+
+Mangager should be able to log in
+They can approve/deny reimbursements
+
+Employees and managers should be able to see a history of 
+their reimbursments and their status
+
+Non-optional mandatory bonus:
+Give it a fun theme. Zelda, WVU, Batman etc
+
+
+Note that there is no requirement to register for an account
+
+Bonus:
+Managers have a statistics section so they can see a break down of information
+like how much each manager has approved, most common type of reimbursement etc
+
+ability to upload a photo with the reimbursement
+
+Make it a single page application

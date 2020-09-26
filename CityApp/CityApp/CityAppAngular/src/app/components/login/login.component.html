@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div style="text-align:center">
+  <div><h1 class="guide"><b>Morgantown City Guide</b></h1></div>
+  
+  <div style="margin-top: 125px"></div>
+  <div class="row">
+  <div class="col-3"></div>
+  <div class="col">
+  <form class="form-group">
+          <h2 class="log">Login</h2>
+          <p style="color: red"><b>{{message}}</b></p>
+          <!-- <label>Username</label><br> -->
+          <input class="form-control" type="text" #user placeholder="Username..." style="margin-bottom: 10px"><br>
+          <!-- <label>Password</label><br> -->
+          <input class="form-control" type="password" #pass placeholder="Password..." style="margin-bottom: 10px"><br>
+          <button type="reset" (click)="login(user.value, pass.value)" class="btn btn-danger" style="margin-bottom: 10px">Login</button>  
+  </form>
+  </div>
+  <div class="col-3"></div>
+  </div>
+  </div>
+  </div>

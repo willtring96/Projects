@@ -1,0 +1,57 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+    height: 70%;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-top: 30px; /* Added */
+  }
+
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+
+  /* THIS ALTERES THE TITLE SETTINGS ON THE PAGE */
+  .create {
+    font-family: "Montserrat", Roboto, Prime;
+    font-size: 50px;
+    letter-spacing: 10px;
+    /* font-weight: lighter; */
+    color: rgb(245, 245, 245);
+    text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+       text-align: center; 
+       margin: 30px; 
+}
+
+/* THIS ENSURES THAT USER'S F/L NAME ARE CENTERED */
+.user {
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* THIS AFFECTS THE WHOLE FORM FOR CHAGING PASSWORD */
+.change {
+  margin-top: 5%;
+}
+
+
+/* THIS BUTTON CONTROLS THE DELETE FUNCTION */
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+
+
+
+

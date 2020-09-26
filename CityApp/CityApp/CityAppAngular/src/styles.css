@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    /* Set the height to 100% for html and body, s
+    o the image will cover the whole page */
+    height: 100%;
+}
+
+/* .navbar-brand {
+    font-family: "Montserrat", Roboto, Prime;
+} */
+
+title {
+    font-family: "Montserrat", Roboto, Prime;
+}
+style {
+
+    /* Photo by Jerry Wang on Unsplash git */
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", Roboto, Prime;
+}
+
+a{
+    cursor: pointer;
+}
+

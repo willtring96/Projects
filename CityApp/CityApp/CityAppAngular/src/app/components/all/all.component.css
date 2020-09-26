@@ -1,0 +1,100 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 75%;
+    height: 33%;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-top: 5%; /* Added */
+ 
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .create {
+    font-family: "Montserrat", Roboto, Prime;
+    font-size: 50px;
+    letter-spacing: 10px;
+    /* font-weight: lighter; */
+    color: rgb(245, 245, 245);
+    text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+       text-align: center; 
+       margin-top: 3%; 
+}
+
+/* @media screen and (min-width: 800px) {
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 75%;
+    height: 33%;
+    margin: 0 auto; 
+    float: none; 
+    margin-top: 5%; 
+ 
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .create {
+    font-family: "Montserrat", Roboto, Prime;
+    font-size: 50px;
+    letter-spacing: 10px;
+
+    color: rgb(245, 245, 245);
+    text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+       text-align: center; 
+       margin-top: 3%; 
+}
+
+}
+
+
+@media screen and (min-width: 400px) {
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 75%;
+    height: 33%;
+    margin: 0 auto; 
+    float: none; 
+    margin-top: 5%; 
+ 
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .create {
+    font-family: "Montserrat", Roboto, Prime;
+    font-size: 50px;
+    letter-spacing: 10px;
+
+    color: rgb(245, 245, 245);
+    text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+       text-align: center; 
+       margin-top: 3%; 
+}
+.btn {
+  
+}
+
+} */

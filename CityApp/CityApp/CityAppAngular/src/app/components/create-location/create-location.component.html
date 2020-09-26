@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h1 class="create"><b>Add Location</b></h1>
+    <div class="row" style="justify-content: center">
+<div class="col-10" style="text-align: center">
+    <div class="input-group mb-5">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><span style="color:red">*</span>Location Name</span>
+        </div>
+        <input type="text" aria-label="Location Name" #lname class="form-control" style="margin-right: 10px; background-color: white">
+        <div class="input-group-prepend">
+            <span class="input-group-text"><span style="color:red">*</span>Location Address</span>
+          </div>
+        <input type="text" aria-label="Location Address" #laddress class="form-control" style="margin-right: 10px; background-color: white">
+            <!-- <div class="input-group-prepend"> -->
+              <!-- <span class="input-group-text" id="basic-addon2"><span style="color:red">*</span>Date</span>
+            </div>
+            <input type="date" class="form-control" placeholder="mm/dd/yyyy" aria-label="Date" #date aria-describedby="basic-addon2"> -->
+          </div>
+          
+        <div class="input-group mb-5">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01"><span style="color:red">*</span>Location Type</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01" #location_type style="margin-right:5px">
+                <option selected value="none">Choose...</option>
+                <option value="Restaurant">Restaurants</option>
+                <option value="Bar">Bar</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Park">Parks & Recreation</option>
+                <option value="Service">Services</option>
+                <option value="Other">Other</option>
+              </select>
+        </div>
+          <div class="input-group mb-5" style="height:175px">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Description<br> (limit 250 characters)</span>
+              </div>
+              <textarea class="form-control" aria-label="describe" #description value=""></textarea>
+            </div>
+          
+            <!-- <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" #doc>
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div> -->
+              <button type="submit" class="btn btn-danger" style="margin-bottom: 10px" (click)="createRequest(lname.value, laddress.value, location_type.value, description.value)">Submit Location</button>          
+           <div class="col-2">
+              <p style="color:red;">*=Required</p></div>
+           </div>
+    </div>
+</div>

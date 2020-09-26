@@ -1,0 +1,38 @@
+<div>
+<app-navbar></app-navbar>
+<h1 class="create"><b>Visited Locations</b></h1>
+
+<div class="card">
+<div class="col">
+    <div class="row" style="margin:15px; padding: 25px;">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" #search type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary my-2 my-sm-0" (click)="attractionByName(search.value)">Search</button>
+          </form>
+    </div>
+
+    <div class="row" style="margin:15px">
+    <button class="btn btn-light" (click)="allAttractions()" style="margin-right: 10px">All</button>
+    <button class="btn btn-danger" (click)="attractionByType('Restaurant')" style="margin-right: 10px">Restaurants</button>
+    <button class="btn btn-dark" (click)="attractionByType('Bar')" style="margin-right: 10px">Bars</button>
+    <button class="btn btn-primary" (click)="attractionByType('Entertainment')" style="margin-right: 10px">Entertainment</button>
+    <button class="btn btn-success" (click)="attractionByType('Park')" style="margin-right: 10px">Public Places</button>
+    <button class="btn btn-info" (click)="attractionByType('Service')" style="margin-right: 10px">Services</button>
+    </div>
+
+    <div class="row">
+      <div *ngFor = "let element of Attractions" style="text-align:center">
+        <a (click)="attractionByID(element.attraction_id)"><div class="card" style="width: 14rem; margin: 15px" >
+            <img src="../../../assets/img/{{element.type}}.jpg" style="height: 150px" class="card-img-top">
+            <div class="card-body" style="height:150px">
+              <h5 class="card-title" style="color:orange">{{element.name}}</h5>
+              <p class="card-text">{{element.type}}</p>
+              <!-- <a class="btn btn-primary" (click)="attractionByID(element.attraction_id)">Go</a> -->
+            </div>
+          </div></a></div>
+      </div>
+      <!-- <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls> -->
+  <!-- <div style="text-align:center" *ngFor = "let element of Attractions"><a style="color:blue;" (click)="attractionByID(element.attraction_id)">{{element.name}}</a></div> -->
+    </div>
+</div>
+</div>

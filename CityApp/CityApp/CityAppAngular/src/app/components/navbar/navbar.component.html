@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" style="margin-right:25px" href="/home">Morgantown City Guide</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" style="margin-right:25px">
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" style="margin-right:25px">
+          <a class="nav-link" href="/all">View Attractions</a>
+      </li>
+      <li class="nav-item" style="margin-right:25px">
+        <a class="nav-link" href="/create">Add Location</a>
+      </li>
+      <li class="nav-item" style="margin-right:25px" *ngIf="isUser">
+          <a class="nav-link" href="/profile">Settings</a>
+        </li>
+      <li class="nav-item" style="margin-right:25px" *ngIf="loggedIn">
+        <a class="nav-link" href="/login" (click)="logOut()">Login</a>
+      </li>
+      <li class="nav-item" style="margin-right:25px" *ngIf="loggedIn">
+        <a class="nav-link" href="/register" (click)="logOut()">Register</a>
+      </li>
+      <li class="nav-item" *ngIf="isUser">
+          <a class="nav-link" (click)="logOut()">Logout</a>
+      </li>
+    </ul>
+    <div style="color:white">{{user.fname}} {{user.lname}}</div>
+    </div>
+</nav>

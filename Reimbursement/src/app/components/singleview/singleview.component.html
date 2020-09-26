@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h1 style="text-align: center; margin: 50px; color:#000000"><b>Reimbursement Entry #{{element.rid}}</b></h1>
+<div class="row" style="justify-content: center">
+<div class="col-10">
+    <table class="table table-striped table-dark table-bordered table-hover" style="table-layout:fixed">
+        <thead><tr style="text-align: center"><th width="80px">Request</th><th width="125px">Type</th><th width="80px">Status</th><th width="125px">Gold</th><th width="125px">Date</th><th width="100px">Requestor</th><th width="150px">Action</th></tr></thead>
+            <tr style="text-align: center"><td>{{element.rid}}</td><td>{{element.reimb_type}}</td><td>{{element.status}}</td><td>{{element.amount}}</td><td>{{element.date_time | date}}</td><td>{{EmployeeName}}</td><td><span *ngIf="canApprove"><button class="btn btn-success btn-sm" style="margin-right: 10px" (click)="this.element.status='Approved'; this.element.manager=this.user.eid; updateReimb();">Approve</button><button class="btn btn-danger btn-sm" (click)="this.element.status='Declined'; this.element.manager=this.user.eid; updateReimb();">Decline</button></span></td></tr>
+    </table>
+</div>
+</div>
+<!-- <div class="row" style="justify-content: center; margin: 10px;" *ngIf="hasUploads">
+  <div class="col-10">
+      <table class="table table-striped table-dark table-bordered table-hover" style="table-layout:auto">
+          <thead><tr style="text-align: center"><th>Uploads</th></tr></thead>
+              <tr style="text-align: center"><td><a [href]="element.docs">{{element.docs}}</a></td></tr>
+      </table>
+  </div></div> -->
+<div class="row" style="justify-content: center">
+  <div class="col-5">
+      <div class="card text-white bg-dark">
+          <h5 class="card-header">Requestor Comments</h5>
+          <div class="card-body">
+            <!-- <h5 class="card-title">Special title treatment</h5> -->
+            <textarea class="form-control" rows="3" [readonly]="disabledReq" [(ngModel)] = "element.req_comm">{{element.req_comm}}</textarea><br>
+            <div *ngIf="requestor"><button class="btn btn-primary" (click)="editReq()" style="margin-right: 10px">Edit</button></div><div *ngIf="showReq"><button class="btn btn-primary" (click)="saveReq()">Save</button></div>
+          </div>
+        </div>
+  </div>
+  <div class="col-5">
+      <div class="card text-white bg-dark mb-3">
+          <h5 class="card-header">Manager Comments</h5>
+          <div class="card-body">
+            <textarea class="form-control" rows="3" [readonly]="disabled" [(ngModel)] = "element.man_comm">{{element.man_comm}}</textarea><br>
+            <div *ngIf="manager"><button class="btn btn-primary" (click)="edit()" style="margin-right: 10px">Edit</button></div><div *ngIf="showMan"><button class="btn btn-primary" (click)="save()">Save</button></div>
+            <div style="text-align:right">Manager: <span style="color:gold">{{managerName}}</span></div>
+          </div>
+        </div>
+  </div>
+</div>
+</div>

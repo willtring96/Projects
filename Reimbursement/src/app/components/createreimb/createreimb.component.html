@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h1 style="text-align: center; margin: 50px; color: #000000"><b>Create Reimbursement</b></h1>
+    <div class="row" style="justify-content: center">
+<div class="col-10" style="text-align: center">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">First Name</span>
+        </div>
+        <input type="text" aria-label="First name" #fname class="form-control" value="{{user.fname}}" style="margin-right: 10px; background-color: turquoise" disabled>
+        <div class="input-group-prepend">
+            <span class="input-group-text">Last Name</span>
+          </div>
+        <input type="text" aria-label="Last name" #lname class="form-control" value="{{user.lname}}" style="margin-right: 10px; background-color: turquoise" disabled>
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2"><span style="color:red">*</span>Date</span>
+            </div>
+            <input type="date" class="form-control" placeholder="mm/dd/yyyy" aria-label="Date" #date aria-describedby="basic-addon2">
+          </div>
+          
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01"><span style="color:red">*</span>Reimbursement Type</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01" #reimb_type style="margin-right:5px">
+                <option selected value="none">Choose...</option>
+                <option value="Champion">Purchased Champion</option>
+                <option value="Bought Item">Bought Item</option>
+                <option value="CreepScore">CreepScore (CS)</option>
+                <option value="First Blood">First Blood</option>
+                <option value="Killing Spree">Killing Spree</option>
+                <option value="Victory">Victory</option>
+              </select>
+
+              <div class="input-group-prepend">
+                <span class="input-group-text"><span style="color:red">*</span>Gold</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Amount" #amount>
+            </div>
+
+          <div class="input-group mb-3" style="height:175px">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Comments<br> (limit 250 characters)</span>
+              </div>
+              <textarea class="form-control" aria-label="ReqComments" #comments></textarea>
+            </div>
+          
+            <!-- <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" #doc>
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div> -->
+              <button type="submit" class="btn btn-primary" style="margin-bottom: 10px" (click)="createRequest(date.value, reimb_type.value, amount.value, comments.value)">Submit Request</button>          
+           <!-- <div class="col-2">
+              <p style="color:red; background-color: white">*=Required</p></div> -->
+           </div>
+    </div>
+</div>
