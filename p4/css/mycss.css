@@ -1,0 +1,10 @@
+ul {
+    display: block;
+    text-align: left;
+    list-style-type: circle;
+    margin-top: 1 em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+}

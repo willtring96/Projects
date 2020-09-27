@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118579996-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118579996-1');
+</script>
+	<title>Rentals</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    
+    <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: LIGHTGRAY;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: ROYALBLUE;
+                border: 3px solid red;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: ROYALBLUE;
+                color: white;
+            }
+            footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: ROYALBLUE;
+                color: ROYALBLUE;
+                text-align: center;
+                border: 3px solid red;
+
+            }
+            .button {
+                height:30px;
+                width:60px;
+            }
+            form, .content {
+	           width: 30%;
+	           margin: 0px;
+	           padding: 20px;
+	           border: 0px solid LIGHTGRAY;
+	           background: LIGHTGRAY;
+	           border-radius: 0px 0px 10px 10px;
+            }
+.button:hover {
+    background-color: green;
+}
+        </style>
+</head>
+<body>
+     <div class="topnav">
+            <a class="active" href="http://lamp.cse.fau.edu/~CEN4010_S2018g11/homepage/home.html">E11even</a>
+            <a href="http://lamp.cse.fau.edu/~CEN4010_S2018g11/user/login.php">Login</a>
+            <a href="http://lamp.cse.fau.edu/~CEN4010_S2018g11/user/register.php">Register</a>
+            <a href="http://lamp.cse.fau.edu/~CEN4010_S2018g11/Products.php">Products</a>
+            <a href="http://lamp.cse.fau.edu/~CEN4010_S2018g11/homepage/rentals.html">Rentals</a>
+            <a href="http://lamp.cse.fau.edu/~CEN4010_S2018g11/homepage/services.html">Services</a>
+            <a href="http://lamp.cse.fau.edu/~CEN4010_S2018g11/homepage/returns.html">Returns</a>
+            <a href="http://lamp.cse.fau.edu/~CEN4010_S2018g11/About.html">About</a>
+        </div>
+        
+        <div class="mainHeader">
+            <h1>Free Rentals for FAU students</h1>
+        </div>
+<form action="/action_page.php" method="get">
+    <h2>Pick equipment: </h2><br><br>
+    <input type="checkbox" name="Logic Boards" value="Logic Boards">Logic Boards<br><br>
+    <input type="checkbox" name="MSP430" value="MSP430">Micro processor packet with MSP430<br><br>
+    <input type="checkbox" name="Raspberry pie" value="Raspberry pie">Design packet with Raspberry pie<br><br>
+    <input type="checkbox" name="iron" value="iron">Soldering iron<br><br>
+    <input type="checkbox" name="multimeter" value="multimeter">Digital multimeter<br><br>
+    <input type="checkbox" name="Stripper" value="Stripper">Wire Stripper<br><br>
+    <input type="checkbox" name="Hand tool" value="Hand tool">Third Hand tool<br><br>
+    <button type="button"><font size="4">Submit</font></button> 
+</form>
+    <br><br>
+    <h3><right>See available spots and choose a pick up date</right></h3><br>
+    <center><img src="Calendar.jpg" alt="East Engineering"></center>
+</body>
+    <footer>footer</footer>
+</html>
