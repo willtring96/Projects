@@ -1,0 +1,52 @@
+<div class="row" ng-hide="contact._id">
+  <div class="col-md-6">
+      <h2>Create new contact</h2>
+  </div>
+</div>
+<div class="container">
+  <div>
+    <form name="contactForm" novalidate>
+    <p>
+      <label>First Name (required)</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.firstName" required name="first">
+      <div ng-show="contactForm.first.$touched && contactForm.first.$invalid">
+        <small style="color:red; display:block; text-align: center;">Enter a valid First Name</small>
+      </div>
+    </p>
+    <p>
+      <label>Last Name (required)</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.lastName" required name="last">
+      <div ng-show="contactForm.last.$touched && contactForm.last.$invalid">
+          <small style="color:red; display:block; text-align: center;">Enter a valid Last Name</small>
+        </div> 
+    </p>
+    <p>
+      <label>Email (required)</label> 
+      <input id="name" class="form-control" type="email" ng-model="contact.email" required name="email"> 
+      <div ng-show="contactForm.email.$touched && contactForm.email.$invalid">
+          <small style="color:red; display:block; text-align: center;">Enter a valid Email</small>
+        </div> 
+    </p>
+    <p>
+      <label>Phone (Mobile)</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.phone.mobile"> 
+    </p>
+    <p>
+      <label>Phone (Work)</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.phone.work"> 
+    </p>
+    <p>
+      <label>Address</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.address"> 
+    </p>
+    <p>
+      <label>Twitter Handle</label> 
+      <input id="name" class="form-control" type="text" ng-model="contact.twitter" placeholder="@..."> 
+    </p>
+    <p>
+      <button style="margin-top:20px" class="btn btn-default" ng-disabled="contactForm.first.$invalid || contactForm.last.$invalid || contactForm.email.$invalid" ng-click="saveContact(contact)">Save</button>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Back</button>
+    </p>
+  </form>
+  </div>
+</div>
