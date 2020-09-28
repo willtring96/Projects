@@ -1,4 +1,4 @@
-#CMS Force
+# CMS Force
 CMS Force is Revature's proprietary Content Management System, providing Trainers and Management a sleek UI to search internal repositories for Notes, Code Samples, Assignments, Project Ideas, and much more across all curricula in an intuitive manner. CMS Force's builder functionality allows users to create a curriculum on the fly, detailing all prerequisites necessary to meet all training goals.
 
 <b>Roles / Responsibilities</b>
